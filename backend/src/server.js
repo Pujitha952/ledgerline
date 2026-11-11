@@ -11,6 +11,7 @@ app.get('/api/health', (req, res) => res.json({ ok: true }));
 app.use('/api/auth', require('./routes/auth.routes'));
 app.use('/api/accounts', require('./routes/accounts.routes'));
 app.use('/api/transactions', require('./routes/transactions.routes'));
+app.use('/api/audit', require('./routes/audit.routes'));
 // Last-resort error handler: never leak internals to the client.
 app.use((err, req, res, next) => {
   console.error(err);
