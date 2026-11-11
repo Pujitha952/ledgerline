@@ -1,0 +1,13 @@
+body { font-family: system-ui, sans-serif; margin: 0; background: #f5f6f8; color: #1b1f24; }
+header { display: flex; gap: 12px; align-items: center; background: #14213d; color: #fff; padding: 12px 20px; }
+header h1 { margin: 0; font-size: 20px; flex: 1; }
+main { max-width: 760px; margin: 20px auto; padding: 0 16px; }
+section, #holderTools, #staffTools { background: #fff; padding: 16px; border-radius: 8px; margin-bottom: 16px; }
+label { display: block; margin: 8px 0; }
+input, select { display: block; width: 100%; padding: 8px; margin-top: 4px; box-sizing: border-box; }
+button { padding: 8px 14px; margin: 6px 6px 6px 0; cursor: pointer; }
+.row { display: flex; gap: 10px; align-items: center; flex-wrap: wrap; padding: 6px 0; border-bottom: 1px solid #eee; }
+code { word-break: break-all; font-size: 12px; }
+pre { background: #f0f1f3; padding: 10px; overflow: auto; max-height: 300px; white-space: pre-wrap; }
+.ok { color: #0a7a2f; }
+.err { color: #b00020; }

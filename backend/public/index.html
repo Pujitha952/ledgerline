@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>LedgerLine</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>LedgerLine</h1>
+    <span id="who"></span>
+    <button id="logout" hidden>Log out</button>
+  </header>
+  <main>
+    <p id="msg" role="status"></p>
+
+    <section id="authView">
+      <h2>Sign in</h2>
+      <form id="authForm">
+        <label>Email <input id="email" type="email" required autocomplete="username"></label>
+        <label>Password (min 8 characters) <input id="password" type="password" required minlength="8" autocomplete="current-password"></label>
+        <button type="submit" id="loginBtn">Log in</button>
+        <button type="button" id="registerBtn">Register</button>
+      </form>
+    </section>
+
+    <section id="appView" hidden>
+      <h2>Accounts</h2>
+      <button id="newAccount" hidden>Open new account</button>
+      <div id="accounts"></div>
+
+      <div id="holderTools" hidden>
+        <h2>Move money</h2>
+        <form id="txForm">
+          <label>Action
+            <select id="kind">
+              <option value="deposit">Deposit</option>
+              <option value="withdraw">Withdraw</option>
+              <option value="transfer">Transfer</option>
+            </select>
+          </label>
+          <label>From / into account <select id="fromAccount"></select></label>
+          <label id="toWrap" hidden>Destination account id <input id="toAccount" type="text"></label>
+          <label>Amount (rupees) <input id="amount" type="text" inputmode="decimal" placeholder="100.50"></label>
+          <button type="submit">Submit</button>
+        </form>
+      </div>
+
+      <div id="staffTools" hidden>
+        <h2>Audit (read only)</h2>
+        <button id="loadAudit">Show audit log</button>
+        <button id="loadIntegrity">Check money integrity</button>
+        <pre id="staffOut"></pre>
+      </div>
+
+      <h2>Statement</h2>
+      <pre id="statement">Select an account's Statement button.</pre>
+    </section>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>
