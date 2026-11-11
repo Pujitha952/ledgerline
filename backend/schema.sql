@@ -51,3 +51,12 @@ create trigger audit_append_only before update or delete on audit_log
   for each row execute function block_changes();
 create trigger ledger_append_only before update or delete on ledger_entries
   for each row execute function block_changes();
+create trigger audit_append_only before update or delete on audit_log
+  for each row execute function block_changes();
+create trigger ledger_append_only before update or delete on ledger_entries
+  for each row execute function block_changes();
+
+create trigger audit_no_truncate before truncate on audit_log
+  for each statement execute function block_changes();
+create trigger ledger_no_truncate before truncate on ledger_entries
+  for each statement execute function block_changes();
