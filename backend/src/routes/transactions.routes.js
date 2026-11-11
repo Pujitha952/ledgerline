@@ -29,7 +29,7 @@ function plan(kind, body, user, byId, sysId) {
     const from = byId[body.from_account_id];
     const to = byId[body.to_account_id];
     if (!from || from.is_system || from.owner_id !== user.id) throw new Fail(404, 'Account not found');
-    if (!to || to.is_system) throw new Fail(404, 'Destination account not found');
+    if (!to || to.is_system) throw new Fail(404, 'Account not found');
     if (Number(from.balance_minor) < amt) throw new Fail(422, 'Insufficient funds');
     return [[from.id, -amt], [to.id, amt]];
   }
