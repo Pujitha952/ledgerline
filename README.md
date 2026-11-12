@@ -3,7 +3,7 @@
 A small money-movement web app: holders deposit, withdraw and transfer money, every movement is a balanced double-entry ledger record, repeated requests never pay twice, and an append-only audit log records who did what.
 
 Live: https://ledgerline-poojitha.onrender.com (free plan: the first load can take about a minute)
-Test login: auditor@ledgerline.test / <YOUR AUDITOR PASSWORD>. Anyone can register as a holder.
+Test login (read-only auditor): auditor@ledgerline.test / AuditorPass#2026. Anyone can register as a holder.
 
 ## What works
 - Register and login. Public sign-up always creates a holder; the server never accepts a role from the client.
